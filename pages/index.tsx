@@ -22,17 +22,17 @@ const Home: NextPage = () => {
   }, [target, options]);
 
   return (
-    <>
+    <main className='selection:bg-black selection:text-white'>
       <section className="w-full h-screen relative z-20 bg-black">
         <div className={`${!visible && 'hidden'} fixed left-[50%] -translate-x-[50%] flex h-full flex-col justify-center items-center text-white`}>
           <h1 className="md:text-xl text-lg font-bold">Adi Cahya Saputra</h1>
           <p className='sm:text-sm'>Software Engineer</p>
         </div>
       </section>
-      <section ref={target} className="w-full h-screen z-10 bg-white relative">
+      <section ref={target} className="w-full min-h-screen z-10 bg-white relative">
         <div className='fixed inset-0'>
           <div className='mt-6 md:mt-0 flex flex-col md:space-y-2 md:justify-center items-center md:w-6/12 md:h-full'>
-            <h1 className={`md:text-5xl text-3xl font-bold transition-all delay-500 ${!visible && '-skew-x-12'}`}>MERN</h1>
+            <h1 className={`md:text-5xl text-3xl font-bold`}>MERN</h1>
             <h2 className={`md:text-4xl text-2xl`}>STACK</h2>
           </div>
         </div>
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
           </div>
         </header>
       </aside>
-    </>
+    </main>
   )
 }
 
